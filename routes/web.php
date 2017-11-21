@@ -1,4 +1,4 @@
-<?php
+<suNoPermitido?php
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Route::get('/formulario', function() {
     return view('formulario');
+});
+Route::get('/usuPermitido', function() {
+    return view('usuPermitido');
+});
+Route::get('/usuNoPermitido', function() {
+    return view('usuNoPermitido');
 });
 
 Route::post('/formulario', 'usuPermitidos@comprobar')->name('comprobar')->middleware('usuPermitidos');

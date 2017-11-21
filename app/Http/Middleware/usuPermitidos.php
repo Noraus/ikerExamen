@@ -19,9 +19,9 @@ class usuPermitidos
         $nombre = $request->nombre;
         $permiso = DB::table('usuPermitidos')->where('nombreUsu', $nombre)->value('permiso');
         if ($permiso == 1) {
-            return view('usuPermitido');
+            return redirect('/usuPermitido');
         } else {
-            return view('usuNoPermitido');
+            return redirect('/usuNoPermitido');
         }
         //return $next($request);
     }
